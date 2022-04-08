@@ -16,6 +16,7 @@
 		9832B4E027FD41510052FBA2 /* VirtualPetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9832B4DF27FD41510052FBA2 /* VirtualPetTests.swift */; };
 		9832B4EA27FD41510052FBA2 /* VirtualPetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9832B4E927FD41510052FBA2 /* VirtualPetUITests.swift */; };
 		9832B4EC27FD41510052FBA2 /* VirtualPetUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9832B4EB27FD41510052FBA2 /* VirtualPetUITestsLaunchTests.swift */; };
+		989C4E6328000DE00077EB47 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989C4E6228000DE00077EB47 /* Background.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		9832B4E527FD41510052FBA2 /* VirtualPetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VirtualPetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9832B4E927FD41510052FBA2 /* VirtualPetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualPetUITests.swift; sourceTree = "<group>"; };
 		9832B4EB27FD41510052FBA2 /* VirtualPetUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualPetUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		989C4E6228000DE00077EB47 /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		9832B4C727FD41500052FBA2 /* VirtualPet */ = {
 			isa = PBXGroup;
 			children = (
+				989C4E6228000DE00077EB47 /* Background.swift */,
 				9832B4C827FD41500052FBA2 /* AppDelegate.swift */,
 				9832B4CA27FD41500052FBA2 /* SceneDelegate.swift */,
 				9832B4CC27FD41500052FBA2 /* ViewController.swift */,
@@ -261,6 +264,7 @@
 				9832B4CD27FD41500052FBA2 /* ViewController.swift in Sources */,
 				9832B4C927FD41500052FBA2 /* AppDelegate.swift in Sources */,
 				9832B4CB27FD41500052FBA2 /* SceneDelegate.swift in Sources */,
+				989C4E6328000DE00077EB47 /* Background.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

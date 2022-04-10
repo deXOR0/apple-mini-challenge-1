@@ -18,6 +18,7 @@
 		9832B4EC27FD41510052FBA2 /* VirtualPetUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9832B4EB27FD41510052FBA2 /* VirtualPetUITestsLaunchTests.swift */; };
 		9883E2872802E2C500981919 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9883E2862802E2C500981919 /* Background.swift */; };
 		989C4E6128000C440077EB47 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989C4E6028000C440077EB47 /* Food.swift */; };
+		98EF021F2802E67300E4D572 /* Inventory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EF021E2802E67300E4D572 /* Inventory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		9832B4EB27FD41510052FBA2 /* VirtualPetUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualPetUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9883E2862802E2C500981919 /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
 		989C4E6028000C440077EB47 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		98EF021E2802E67300E4D572 /* Inventory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inventory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 		9832B4C727FD41500052FBA2 /* VirtualPet */ = {
 			isa = PBXGroup;
 			children = (
+				98EF021E2802E67300E4D572 /* Inventory.swift */,
 				9883E2862802E2C500981919 /* Background.swift */,
 				989C4E6028000C440077EB47 /* Food.swift */,
 				9832B4C827FD41500052FBA2 /* AppDelegate.swift */,
@@ -264,6 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98EF021F2802E67300E4D572 /* Inventory.swift in Sources */,
 				9832B4CD27FD41500052FBA2 /* ViewController.swift in Sources */,
 				989C4E6128000C440077EB47 /* Food.swift in Sources */,
 				9832B4C927FD41500052FBA2 /* AppDelegate.swift in Sources */,

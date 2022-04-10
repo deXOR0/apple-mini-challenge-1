@@ -51,7 +51,7 @@
 		9832B4E527FD41510052FBA2 /* VirtualPetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VirtualPetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9832B4E927FD41510052FBA2 /* VirtualPetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualPetUITests.swift; sourceTree = "<group>"; };
 		9832B4EB27FD41510052FBA2 /* VirtualPetUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualPetUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		9883E2862802E2C500981919 /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Background.swift; path = VirtualPet/Background.swift; sourceTree = "<group>"; };
+		9883E2862802E2C500981919 /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
 		989C4E6028000C440077EB47 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,7 +83,6 @@
 		9832B4BC27FD41500052FBA2 = {
 			isa = PBXGroup;
 			children = (
-				9883E2862802E2C500981919 /* Background.swift */,
 				9832B4C727FD41500052FBA2 /* VirtualPet */,
 				9832B4DE27FD41510052FBA2 /* VirtualPetTests */,
 				9832B4E827FD41510052FBA2 /* VirtualPetUITests */,
@@ -104,6 +103,7 @@
 		9832B4C727FD41500052FBA2 /* VirtualPet */ = {
 			isa = PBXGroup;
 			children = (
+				9883E2862802E2C500981919 /* Background.swift */,
 				989C4E6028000C440077EB47 /* Food.swift */,
 				9832B4C827FD41500052FBA2 /* AppDelegate.swift */,
 				9832B4CA27FD41500052FBA2 /* SceneDelegate.swift */,

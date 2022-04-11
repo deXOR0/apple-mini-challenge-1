@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4CB38C8C2803D296004E6772 /* Journal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB38C8B2803D296004E6772 /* Journal.swift */; };
 		9832B4C927FD41500052FBA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9832B4C827FD41500052FBA2 /* AppDelegate.swift */; };
 		9832B4CB27FD41500052FBA2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9832B4CA27FD41500052FBA2 /* SceneDelegate.swift */; };
 		9832B4CD27FD41500052FBA2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9832B4CC27FD41500052FBA2 /* ViewController.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4CB38C8B2803D296004E6772 /* Journal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Journal.swift; sourceTree = "<group>"; };
 		9832B4C527FD41500052FBA2 /* VirtualPet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VirtualPet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9832B4C827FD41500052FBA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9832B4CA27FD41500052FBA2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				9883E2862802E2C500981919 /* Background.swift */,
 				989C4E6028000C440077EB47 /* Food.swift */,
 				9832B4C827FD41500052FBA2 /* AppDelegate.swift */,
+				4CB38C8B2803D296004E6772 /* Journal.swift */,
 				9832B4CA27FD41500052FBA2 /* SceneDelegate.swift */,
 				9832B4CC27FD41500052FBA2 /* ViewController.swift */,
 				9832B4CE27FD41500052FBA2 /* Main.storyboard */,
@@ -272,6 +275,7 @@
 				989C4E6128000C440077EB47 /* Food.swift in Sources */,
 				9832B4C927FD41500052FBA2 /* AppDelegate.swift in Sources */,
 				9832B4CB27FD41500052FBA2 /* SceneDelegate.swift in Sources */,
+				4CB38C8C2803D296004E6772 /* Journal.swift in Sources */,
 				9883E2872802E2C500981919 /* Background.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

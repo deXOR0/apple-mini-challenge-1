@@ -9,7 +9,8 @@ import UIKit
 
 struct Journal {
     let journalID: String
-    let dateTime : Date
+    let startDate : Date
+    let endDate : Date
     let feelings : Float
     let gamesPlayed : String
     let gamingExperience : String

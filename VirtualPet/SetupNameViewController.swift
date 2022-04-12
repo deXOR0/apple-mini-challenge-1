@@ -15,13 +15,6 @@ class SetupNameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("Connected")
-        if let name = USER_NAME.string(forKey: "name") {
-            print(name)
-        }
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
     }
     
     @IBAction func SaveName(_ sender: UIButton) {

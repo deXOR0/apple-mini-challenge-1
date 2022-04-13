@@ -15,9 +15,100 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Park_Background" translatesAutoresizingMaskIntoConstraints="NO" id="GFk-eV-f1Y">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Pet_Idle" translatesAutoresizingMaskIntoConstraints="NO" id="dy1-kr-LOx">
+                                <rect key="frame" x="75" y="328" width="240" height="300"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JzB-7V-isj">
+                                <rect key="frame" x="0.0" y="767" width="390" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.24059311218503401" colorSpace="custom" customColorSpace="displayP3"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" image="YES"/>
+                                </accessibility>
+                                <color key="textColor" red="0.034399637494198096" green="0.19278002497741031" blue="0.21673646907628863" alpha="0.73224914962789112" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ymf-EW-Wcz">
+                                <rect key="frame" x="135" y="677" width="120" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="Button_Timer"/>
+                                <connections>
+                                    <action selector="timerSetter:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="83r-8J-ca2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jYI-CA-REi">
+                                <rect key="frame" x="266" y="712" width="108" height="98"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="Button_Shop_Text"/>
+                                <connections>
+                                    <action selector="shop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M5N-eO-JVQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mMX-GV-9MK">
+                                <rect key="frame" x="17" y="713" width="108" height="98"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="Button_Inventory_Text"/>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Money Background" translatesAutoresizingMaskIntoConstraints="NO" id="Ave-4X-4mY">
+                                <rect key="frame" x="233" y="72" width="120" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Symbol_Coin" translatesAutoresizingMaskIntoConstraints="NO" id="N32-J0-6Uv">
+                                <rect key="frame" x="247" y="87" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" progressImage="Progress Affection" trackImage="Track" translatesAutoresizingMaskIntoConstraints="NO" id="1PZ-J4-eoZ">
+                                <rect key="frame" x="67" y="159" width="100" height="4"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </progressView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" progressImage="Progress Eat" trackImage="Track" translatesAutoresizingMaskIntoConstraints="NO" id="OHY-9o-F6u">
+                                <rect key="frame" x="67" y="200" width="100" height="4"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </progressView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Symbol_Affection" translatesAutoresizingMaskIntoConstraints="NO" id="kuc-Fg-bvz">
+                                <rect key="frame" x="30" y="146" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Symbol_Hunger" translatesAutoresizingMaskIntoConstraints="NO" id="9gd-Gf-2ZV">
+                                <rect key="frame" x="30" y="187" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="User Logo" translatesAutoresizingMaskIntoConstraints="NO" id="ReU-6L-nDS">
+                                <rect key="frame" x="29" y="77" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="500" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="5fK-AB-qCg">
+                                <rect key="frame" x="250" y="81" width="86" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" image="YES"/>
+                                </accessibility>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="affectionMeter" destination="1PZ-J4-eoZ" id="JrJ-Df-kbU"/>
+                        <outlet property="hungerMeter" destination="OHY-9o-F6u" id="9GK-VI-0Kj"/>
+                        <outlet property="inventory" destination="mMX-GV-9MK" id="omf-s0-wYc"/>
+                        <outlet property="money" destination="5fK-AB-qCg" id="XA9-bW-XD8"/>
+                        <outlet property="user" destination="ReU-6L-nDS" id="ZMY-Ne-0K7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -25,6 +116,19 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Button_Inventory_Text" width="83.333335876464844" height="83.333335876464844"/>
+        <image name="Button_Shop_Text" width="83.333335876464844" height="83.333335876464844"/>
+        <image name="Button_Timer" width="99.666664123535156" height="123"/>
+        <image name="Money Background" width="160" height="60"/>
+        <image name="Park_Background" width="1170" height="2532"/>
+        <image name="Pet_Idle" width="746" height="1066"/>
+        <image name="Progress Affection" width="200" height="20"/>
+        <image name="Progress Eat" width="200" height="20"/>
+        <image name="Symbol_Affection" width="166.66667175292969" height="166.66667175292969"/>
+        <image name="Symbol_Coin" width="1000" height="1000"/>
+        <image name="Symbol_Hunger" width="166.66667175292969" height="166.66667175292969"/>
+        <image name="Track" width="200" height="20"/>
+        <image name="User Logo" width="100" height="100"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

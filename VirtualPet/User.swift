@@ -19,6 +19,10 @@ class User: Codable {
     var lastLoggedIn: Date = Date()
     var gamingQuotaLeft: Int = 0
     var gamingTargetTime: Int = 0
+    var hunger: Int = 0
+    var affection: Int = 0
+    let dailyHungerDrain: Int = 30
+    let dailyAffectionDrain: Int = 5
     var journalCollection: JournalCollection = JournalCollection()
     var inventory: Inventory = Inventory()
     let userDefault: UserDefaults = UserDefaults.standard
@@ -65,6 +69,16 @@ class User: Codable {
     func resetGamingQuota() {
         self.gamingQuotaLeft = self.gamingTargetTime
         self.lastLoggedIn = Date()
+    }
+    
+    func decreaseHunger() {
+        //tiap hari berkurang 30, stops at 0
+        self.hunger = max(self.hunger - self.dailyHungerDrain, 0)
+    }
+    
+    func decreaseAffection() {
+        //tiap hari berkurang 5, stops at 0
+        self.affection = max(self.affection - self.dailyAffectionDrain, 0)
     }
 
     func getLastWeekActivity() -> [TimePlayed] {

@@ -10,7 +10,7 @@ import UIKit
 class SetupNameViewController: UIViewController {
     
     @IBOutlet weak var nameField: UITextField!
-    let USER_NAME = UserDefaults.standard
+    var user: User = User()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,8 +18,18 @@ class SetupNameViewController: UIViewController {
     }
     
     @IBAction func SaveName(_ sender: UIButton) {
-        if (nameField.text?.count)! > 0 {
-            USER_NAME.set(nameField, forKey: "name")
+        if let name = nameField.text {
+            if name.trimmingCharacters(in: .whitespacesAndNewlines).count > 0 {
+                self.user.name = name
+                performSegue(withIdentifier: "SetupGameTime", sender: self)
+            }
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "SetupGameTime" {
+            let destinationViewController = segue.destination as? SetupGameHoursViewController
+            destinationViewController?.user = self.user
         }
     }
 }

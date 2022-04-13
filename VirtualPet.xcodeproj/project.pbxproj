@@ -13,6 +13,8 @@
 		4CB38C962805377F004E6772 /* Journal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CB38C952805377F004E6772 /* Journal.storyboard */; };
 		4CB38CBF2807265D004E6772 /* Overview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CB38CBE2807265D004E6772 /* Overview.storyboard */; };
 		4CB38CC128072679004E6772 /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB38CC028072679004E6772 /* OverviewViewController.swift */; };
+		4CB38CC328073545004E6772 /* Results.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CB38CC228073545004E6772 /* Results.storyboard */; };
+		4CB38CC528073568004E6772 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB38CC428073568004E6772 /* ResultsViewController.swift */; };
 		9832B4C927FD41500052FBA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9832B4C827FD41500052FBA2 /* AppDelegate.swift */; };
 		9832B4CB27FD41500052FBA2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9832B4CA27FD41500052FBA2 /* SceneDelegate.swift */; };
 		9832B4CD27FD41500052FBA2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9832B4CC27FD41500052FBA2 /* ViewController.swift */; };
@@ -69,6 +71,8 @@
 		4CB38C952805377F004E6772 /* Journal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Journal.storyboard; sourceTree = "<group>"; };
 		4CB38CBE2807265D004E6772 /* Overview.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Overview.storyboard; sourceTree = "<group>"; };
 		4CB38CC028072679004E6772 /* OverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
+		4CB38CC228073545004E6772 /* Results.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Results.storyboard; sourceTree = "<group>"; };
+		4CB38CC428073568004E6772 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		9832B4C527FD41500052FBA2 /* VirtualPet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VirtualPet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9832B4C827FD41500052FBA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9832B4CA27FD41500052FBA2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -164,6 +168,8 @@
 				4CB38C8F2803D8EB004E6772 /* JournalCollection.swift */,
 				4CB38CBE2807265D004E6772 /* Overview.storyboard */,
 				4CB38CC028072679004E6772 /* OverviewViewController.swift */,
+				4CB38CC228073545004E6772 /* Results.storyboard */,
+				4CB38CC428073568004E6772 /* ResultsViewController.swift */,
 				9832B4CA27FD41500052FBA2 /* SceneDelegate.swift */,
 				9832B4CC27FD41500052FBA2 /* ViewController.swift */,
 				987CC0892806C96300FDA4B2 /* IntroSequence.storyboard */,
@@ -313,6 +319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				987CC0962806EA0E00FDA4B2 /* Timer.storyboard in Resources */,
+				4CB38CC328073545004E6772 /* Results.storyboard in Resources */,
 				987CC08A2806C96300FDA4B2 /* IntroSequence.storyboard in Resources */,
 				987CC0872806A17D00FDA4B2 /* Setup.storyboard in Resources */,
 				9832B4D527FD41510052FBA2 /* LaunchScreen.storyboard in Resources */,
@@ -363,6 +370,7 @@
 				987CC09A2806F9D400FDA4B2 /* TimerViewController.swift in Sources */,
 				98EF026728044D2C00E4D572 /* BarChart.swift in Sources */,
 				98DE56AC2805D65E00DB7314 /* ProfileViewController.swift in Sources */,
+				4CB38CC528073568004E6772 /* ResultsViewController.swift in Sources */,
 				987CC0862806A17D00FDA4B2 /* SetupGameHoursViewController.swift in Sources */,
 				987CC0902806CED500FDA4B2 /* Intro4ViewController.swift in Sources */,
 				4CB38C8C2803D296004E6772 /* Journal.swift in Sources */,

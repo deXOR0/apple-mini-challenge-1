@@ -29,6 +29,9 @@
 		987CC0902806CED500FDA4B2 /* Intro4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987CC08F2806CED500FDA4B2 /* Intro4ViewController.swift */; };
 		987CC0922806CF0500FDA4B2 /* Intro3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987CC0912806CF0500FDA4B2 /* Intro3ViewController.swift */; };
 		987CC0942806D4E800FDA4B2 /* LetsDoThisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987CC0932806D4E800FDA4B2 /* LetsDoThisViewController.swift */; };
+		987CC0962806EA0E00FDA4B2 /* Timer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 987CC0952806EA0E00FDA4B2 /* Timer.storyboard */; };
+		987CC0982806ED6400FDA4B2 /* TimerPromptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987CC0972806ED6400FDA4B2 /* TimerPromptViewController.swift */; };
+		987CC09A2806F9D400FDA4B2 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987CC0992806F9D400FDA4B2 /* TimerViewController.swift */; };
 		9883E2872802E2C500981919 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9883E2862802E2C500981919 /* Background.swift */; };
 		989C4E6128000C440077EB47 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989C4E6028000C440077EB47 /* Food.swift */; };
 		98DE56AA2805D05E00DB7314 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98DE56A92805D05E00DB7314 /* Profile.storyboard */; };
@@ -84,6 +87,9 @@
 		987CC08F2806CED500FDA4B2 /* Intro4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intro4ViewController.swift; sourceTree = "<group>"; };
 		987CC0912806CF0500FDA4B2 /* Intro3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intro3ViewController.swift; sourceTree = "<group>"; };
 		987CC0932806D4E800FDA4B2 /* LetsDoThisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetsDoThisViewController.swift; sourceTree = "<group>"; };
+		987CC0952806EA0E00FDA4B2 /* Timer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Timer.storyboard; sourceTree = "<group>"; };
+		987CC0972806ED6400FDA4B2 /* TimerPromptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerPromptViewController.swift; sourceTree = "<group>"; };
+		987CC0992806F9D400FDA4B2 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		9883E2862802E2C500981919 /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
 		989C4E6028000C440077EB47 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		98DE56A92805D05E00DB7314 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
@@ -144,6 +150,9 @@
 			isa = PBXGroup;
 			children = (
 				98EF021E2802E67300E4D572 /* Inventory.swift */,
+				987CC0952806EA0E00FDA4B2 /* Timer.storyboard */,
+				987CC0992806F9D400FDA4B2 /* TimerViewController.swift */,
+				987CC0972806ED6400FDA4B2 /* TimerPromptViewController.swift */,
 				9883E2862802E2C500981919 /* Background.swift */,
 				989C4E6028000C440077EB47 /* Food.swift */,
 				9832B4C827FD41500052FBA2 /* AppDelegate.swift */,
@@ -297,6 +306,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				987CC0962806EA0E00FDA4B2 /* Timer.storyboard in Resources */,
 				987CC08A2806C96300FDA4B2 /* IntroSequence.storyboard in Resources */,
 				987CC0872806A17D00FDA4B2 /* Setup.storyboard in Resources */,
 				9832B4D527FD41510052FBA2 /* LaunchScreen.storyboard in Resources */,
@@ -342,12 +352,14 @@
 				987CC0922806CF0500FDA4B2 /* Intro3ViewController.swift in Sources */,
 				9832B4CB27FD41500052FBA2 /* SceneDelegate.swift in Sources */,
 				987CC08C2806CCD200FDA4B2 /* Intro1ViewController.swift in Sources */,
+				987CC09A2806F9D400FDA4B2 /* TimerViewController.swift in Sources */,
 				98EF026728044D2C00E4D572 /* BarChart.swift in Sources */,
 				98DE56AC2805D65E00DB7314 /* ProfileViewController.swift in Sources */,
 				987CC0862806A17D00FDA4B2 /* SetupGameHoursViewController.swift in Sources */,
 				987CC0902806CED500FDA4B2 /* Intro4ViewController.swift in Sources */,
 				4CB38C8C2803D296004E6772 /* Journal.swift in Sources */,
 				9883E2872802E2C500981919 /* Background.swift in Sources */,
+				987CC0982806ED6400FDA4B2 /* TimerPromptViewController.swift in Sources */,
 				987CC0942806D4E800FDA4B2 /* LetsDoThisViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

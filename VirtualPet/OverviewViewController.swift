@@ -17,7 +17,7 @@ class OverviewViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+          
         let barChart = BarChart(barChartView: barChartView)
         
         let targetTime = 6 * 3600

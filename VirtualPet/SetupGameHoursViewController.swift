@@ -42,22 +42,19 @@ class SetupGameHoursViewController: UIViewController, UIPickerViewDataSource, UI
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(user.name)
     }
     
     @IBAction func SaveGameHours(_ sender: UIButton) {
-        if self.hours == 24 {
-            if self.minutes == 0 {
-                self.user.gamingTargetTime = (self.hours * 3600) + (self.minutes * 60)\
-            }
+        if (self.hours == 24 && self.minutes == 0) || (self.minutes == 0 && self.hours > 0) || (self.hours >= 0 && self.hours <= 23 && self.minutes > 0 && self.minutes <= 45) {
+            self.user.gamingTargetTime = (self.hours * 3600) + (self.minutes * 60)
+            performSegue(withIdentifier: "gotoLetsDoThis", sender: self)
         }
-//        performSegue(withIdentifier: "<segueName>", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "<segueName>" {
-//            let destinationViewController = segue.destination as? <ViewControllerName>
-//            destinationViewController?.user = self.user
-//        }
+        if segue.identifier == "gotoLetsDoThis" {
+            let destinationViewController = segue.destination as? LetsDoThisViewController
+            destinationViewController?.user = self.user
+        }
     }
 }

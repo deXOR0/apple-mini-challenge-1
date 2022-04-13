@@ -15,7 +15,7 @@ class Inventory: Codable {
     init() {
         foodCollection = [String: Int]()
         backgroundCollection = [String]()
-        backgroundUsed = "default"
+        backgroundUsed = "Background_Park"
     }
     
     /**

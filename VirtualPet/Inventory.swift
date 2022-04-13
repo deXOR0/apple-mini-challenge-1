@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Inventory {
+class Inventory: Codable {
     var foodCollection: [String:Int]
     var backgroundCollection:[String]
     var backgroundUsed: String

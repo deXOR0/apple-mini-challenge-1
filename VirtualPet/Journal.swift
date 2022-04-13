@@ -7,7 +7,7 @@
 import Foundation
 import UIKit
 
-struct Journal {
+struct Journal: Codable {
     let journalID: String
     let startDate : Date
     let endDate : Date

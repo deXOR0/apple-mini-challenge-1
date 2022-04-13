@@ -7,14 +7,14 @@
 
 import Foundation
 
-class User {
+class User: Codable {
     var name: String = ""
     var isNewUser: Bool = true
     let maxCoins = 99999
     let minCoins = 50
     let maxLevel = 10
-    var userCoins: Int = 0
-    var userLevel: Int = 0
+    var userCoins: Int = 50
+    var userLevel: Int = 1
     var userExperience: Int = 0
     var lastLoggedIn: Date = Date()
     var gamingQuotaLeft: Int = 0
@@ -25,33 +25,45 @@ class User {
     let USER_KEY = "user_key"
 
     func loadSavedUser() -> Bool {
-        let savedUser = userDefault.object(forKey: USER_KEY) as? User
-        if let user = savedUser {
-            self.name = user.name
-            self.isNewUser = false
-            self.userCoins = user.userCoins
-            self.userLevel = user.userLevel
-            self.userExperience = user.userExperience
-            self.lastLoggedIn = user.lastLoggedIn
-            self.gamingQuotaLeft = user.gamingQuotaLeft
-            self.gamingTargetTime = user.gamingTargetTime
-            self.journalCollection = user.journalCollection
-            self.inventory = user.inventory
-            resetGamingQuota()
-            save()
-            return true
+        if let data = self.userDefault.data(forKey: self.USER_KEY) {
+            do {
+                let decoder = JSONDecoder()
+                let user = try decoder.decode(User.self, from: data)
+                self.name = user.name
+                self.isNewUser = false
+                self.userCoins = user.userCoins
+                self.userLevel = user.userLevel
+                self.userExperience = user.userExperience
+                self.lastLoggedIn = user.lastLoggedIn
+                self.gamingQuotaLeft = user.gamingQuotaLeft
+                self.gamingTargetTime = user.gamingTargetTime
+                self.journalCollection = user.journalCollection
+                self.inventory = user.inventory
+                if !Calendar.current.isDateInToday(self.lastLoggedIn) {
+                    resetGamingQuota()
+                }
+                save()
+                return true
+            } catch {
+                // Fallback
+            }
         }
         return false
     }
 
     func save() {
-        userDefault.set(self, forKey: USER_KEY)
+        do {
+            let user = self
+            let encoder = JSONEncoder()
+            let data = try encoder.encode(user)
+            self.userDefault.set(data, forKey: self.USER_KEY)
+        } catch {
+            // Fallback
+        }
     }
 
     func resetGamingQuota() {
-        if !Calendar.current.isDateInToday(self.lastLoggedIn){
-            self.gamingQuotaLeft = self.gamingTargetTime
-        }
+        self.gamingQuotaLeft = self.gamingTargetTime
         self.lastLoggedIn = Date()
     }
 
@@ -73,5 +85,18 @@ class User {
         }
         
         return activity
+    }
+    
+    enum CodingKeys: String, CodingKey {
+        case name
+        case isNewUser
+        case userCoins
+        case userLevel
+        case userExperience
+        case lastLoggedIn
+        case gamingQuotaLeft
+        case gamingTargetTime
+        case journalCollection
+        case inventory
     }
 }

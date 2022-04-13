@@ -1,6 +1,6 @@
 import Foundation
 
-class JournalCollection {
+class JournalCollection: Codable {
     var journals: [Date:[Journal]]
     
     init(){
@@ -14,6 +14,10 @@ class JournalCollection {
         existingItems.append(journal)
         journals[date] = existingItems
 
+    }
+    
+    enum CodingKeys: String, CodingKey {
+        case journals
     }
     
 }

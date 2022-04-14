@@ -103,6 +103,7 @@ class InventoryViewController: UIViewController {
     }
     @IBAction func pizzaButton(_ sender: UIButton) {
         if self.user.inventory.consumeFood(foodID: "Pizza") {
+            self.pizzaCount -= 1
             self.user.hunger += min(storeData.foods["pizza"]!.foodHealth, 100)
             self.user.affection = min(self.user.affection + 5, 100)
             self.user.save()
@@ -111,6 +112,7 @@ class InventoryViewController: UIViewController {
     }
     @IBAction func cookieButton(_ sender: UIButton) {
         if self.user.inventory.consumeFood(foodID: "Cookie") {
+            self.cookieCount -= 1
             self.user.hunger += min(storeData.foods["cookie"]!.foodHealth, 100)
             self.user.affection += min(self.user.affection + 5, 100)
             self.user.save()
@@ -119,6 +121,7 @@ class InventoryViewController: UIViewController {
     }
     @IBAction func candyButton(_ sender: UIButton) {
         if self.user.inventory.consumeFood(foodID: "Candy") {
+            self.candyCount -= 1
             self.user.hunger += min(storeData.foods["candy"]!.foodHealth, 100)
             self.user.affection += min(self.user.affection + 5, 100)
             self.user.save()

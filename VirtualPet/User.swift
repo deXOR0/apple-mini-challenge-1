@@ -52,11 +52,11 @@ class User: Codable {
                 // Fallback
             }
         }
-        self.inventory.storeBackground(backgroundID: "Background_Park")
         return false
     }
     
     func injectData() {
+        self.inventory.storeBackground(backgroundID: "Background_Park")
         journalCollection.addJournal(todaysDate: getDate(dateStr: "2022-03-01T11:42:00"), journal: Journal(journalID: "2022-03-01T11:42:00", startDate: getDate(dateStr: "2022-03-01T11:42:00"), endDate: getDate(dateStr: "2022-03-01T11:42:00"), feelings: 0.5, gamesPlayed: "Counter Strike", gamingExperience: "Mantap"))
                 journalCollection.addJournal(todaysDate: getDate(dateStr: "2022-04-01T11:42:00"), journal: Journal(journalID: "2022-04-01T11:42:00", startDate: getDate(dateStr: "2022-04-01T11:42:00"), endDate: getDate(dateStr: "2022-04-01T11:42:00"), feelings: 0.5, gamesPlayed: "Counter Strike", gamingExperience: "Mantap"))
                 journalCollection.addJournal(todaysDate: getDate(dateStr: "2022-04-02T11:42:00"), journal: Journal(journalID: "2022-04-02T11:42:00", startDate: getDate(dateStr: "2022-04-02T11:42:00"), endDate: getDate(dateStr: "2022-04-02T11:42:00"), feelings: 0.5, gamesPlayed: "Counter Strike", gamingExperience: "Mantap"))

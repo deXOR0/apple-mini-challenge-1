@@ -15,6 +15,9 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var levelLabel: UILabel!
     @IBOutlet weak var usernameLabel: UILabel!
     
+    var user: User = User()
+    var date: Date = Calendar.current.startOfDay(for: Date())
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,19 +33,11 @@ class ProfileViewController: UIViewController {
         /// Dummy Data
         /// Change with data from user
         
-        let userName = "Pocky"
-        let userLevel = 9
+        let userName = user.name
+        let userLevel = user.userLevel
         
-        let targetTime = 6 * 3600
-        let activity: [TimePlayed] = [
-            TimePlayed(date: getDate(dateStr: "2022-04-06"), playTimeInSeconds: 3 * 3600),
-            TimePlayed(date: getDate(dateStr: "2022-04-07"), playTimeInSeconds: 4 * 3600),
-            TimePlayed(date: getDate(dateStr: "2022-04-08"), playTimeInSeconds: 5 * 3600),
-            TimePlayed(date: getDate(dateStr: "2022-04-09"), playTimeInSeconds: 8 * 3600),
-            TimePlayed(date: getDate(dateStr: "2022-04-10"), playTimeInSeconds: 6 * 3600),
-            TimePlayed(date: getDate(dateStr: "2022-04-11"), playTimeInSeconds: 7 * 3600),
-            TimePlayed(date: getDate(dateStr: "2022-04-12"), playTimeInSeconds: 12 * 3600)
-        ]
+        let targetTime = user.gamingTargetTime
+        let activity: [TimePlayed] = user.getLastWeekActivity()
         
         barChart.setupBarChart(targetTimeInSeconds: targetTime, lastWeekActivity: activity)
         usernameLabel.text = userName
@@ -50,18 +45,31 @@ class ProfileViewController: UIViewController {
 
     }
     
-    func getDate(dateStr: String) -> Date {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        dateFormatter.timeZone = TimeZone.current
-        dateFormatter.locale = Locale.current
-        return dateFormatter.date(from: dateStr) ?? Date() // "2015-04-01T11:42:00"
-    }
-    
     @IBAction func calendarValueChanged(_ sender: UIDatePicker) {
-        print(sender.date)
+        self.date = Calendar.current.startOfDay(for: sender.date)
+        print(date)
+        if let pickedDate = self.user.journalCollection.journals[date] {
+            performSegue(withIdentifier: "gotoJournalDetails", sender: self)
+        }
         /// if sender.date exists in user journalCollection, performSegue with data: sender.date
         /// else do nothing
+    }
+
+    
+    @IBAction func backButtonPressed(_ sender: UIButton) {
+        performSegue(withIdentifier: "backToHome", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "backToHome" {
+            let destinationViewController = segue.destination as? ViewController
+            destinationViewController?.user = self.user
+        }
+        else if segue.identifier == "gotoJournalDetails" {
+            let destinationViewController = segue.destination as? DetailsTableViewController
+            destinationViewController?.user = self.user
+            destinationViewController?.date = self.date
+        }
     }
     
 

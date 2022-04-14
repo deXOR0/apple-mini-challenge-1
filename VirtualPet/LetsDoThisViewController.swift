@@ -20,18 +20,19 @@ class LetsDoThisViewController: UIViewController {
     @IBAction func letsGoButtonPressed(_ sender: UIButton) {
         self.user.isNewUser = false
         self.user.resetGamingQuota()
+        self.user.injectData()
         self.user.save()
-//        performSegue(withIdentifier: "<segueName>", sender: self)
+        performSegue(withIdentifier: "gotoHome", sender: self)
     }
     
-//
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "<segueName>" {
-//            self.user.isNewUser = false
-//            let destinationViewController = segue.destination as? <ViewControllerName>
-//            destinationViewController?.user = self.user
-//        }
-//    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "gotoHome" {
+            self.user.isNewUser = false
+            let destinationViewController = segue.destination as? ViewController
+            destinationViewController?.user = self.user
+        }
+    }
     
 
     /*

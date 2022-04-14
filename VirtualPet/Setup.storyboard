@@ -209,10 +209,23 @@
                         <viewLayoutGuide key="safeArea" id="d2E-AD-00G"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <segue destination="AQz-tC-VyD" kind="presentation" identifier="gotoHome" modalPresentationStyle="fullScreen" id="wJU-UE-ily"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y72-2G-ugC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1692" y="83"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="aV0-LO-cFg">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="AQz-tC-VyD" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="HN8-4Y-ZRI"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eGx-vO-JHd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2290" y="107"/>
         </scene>
     </scenes>
     <resources>

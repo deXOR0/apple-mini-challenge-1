@@ -20,7 +20,6 @@ class TimerPromptViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
         promptView.layer.cornerRadius = 10
         timeView.layer.cornerRadius = 8
@@ -40,6 +39,9 @@ class TimerPromptViewController: UIViewController {
             changeTimerLabelColorDanger()
         }
         
+    }
+    @IBAction func backButton(_ sender: UIButton) {
+        performSegue(withIdentifier: "gotoHome", sender: self)
     }
     
     func changeTimerLabelColorDanger() {
@@ -71,6 +73,10 @@ class TimerPromptViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "gotoTimer" {
             let destinationViewController = segue.destination as? TimerViewController
+            destinationViewController?.user = self.user
+        }
+        else if segue.identifier == "gotoHome" {
+            let destinationViewController = segue.destination as? ViewController
             destinationViewController?.user = self.user
         }
     }

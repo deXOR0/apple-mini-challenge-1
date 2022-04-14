@@ -15,6 +15,7 @@ class ResultsViewController: UIViewController {
     @IBOutlet weak var levelHolder: UILabel!
     @IBOutlet weak var expGained: UILabel!
     @IBOutlet weak var expRange: UILabel!
+    @IBOutlet weak var background: UIImageView!
     
     @IBOutlet weak var bottomOverlayView: UIView!
     
@@ -22,22 +23,28 @@ class ResultsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        background.image = UIImage(named: user.inventory.backgroundUsed)
         bottomOverlayView.layer.opacity = 0.5
         
-        
-        var xpAdd = 10
-        let currentPlay = 0
+        var xpAdd = 30
         
         var message = "Good job, keep it up!"
         oodinHolder.image = UIImage(named: "Pet_Success")
-        if  currentPlay > user.gamingTargetTime {
+        if  self.user.gamingQuotaLeft < 0 {
+            self.user.gamingQuotaLeft = 0
             message = "Let’s do better next time."
-            xpAdd = 5
+            xpAdd = 0
             oodinHolder.image = UIImage(named: "Pet_Failed")
         }
         
         user.userExperience += xpAdd
+        
+        if user.userExperience >= 100 {
+            user.userLevel += 1
+            user.userExperience %= 100
+        }
+        user.save()
         
         levelHolder.text = "Level " + String(user.userLevel)
         expRange.text = "Xp \(user.userExperience)/100"
@@ -45,12 +52,22 @@ class ResultsViewController: UIViewController {
         
         resultMessage.text = message
         
-        UIView.animate(withDuration: 1){
+        UIView.animate(withDuration: 3){
             self.levelBar.setProgress(Float(self.user.userExperience)/100, animated: true)
         }
     }
     
 
+    @IBAction func continueButtonPressed(_ sender: UIButton) {
+        performSegue(withIdentifier: "gotoHome", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "gotoHome" {
+            let destinationViewController = segue.destination as? ViewController
+            destinationViewController?.user = self.user
+        }
+    }
     /*
     // MARK: - Navigation
 

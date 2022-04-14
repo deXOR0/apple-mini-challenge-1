@@ -8,10 +8,21 @@ import Foundation
 import UIKit
 
 struct Journal: Codable {
-    let journalID: String
-    let startDate : Date
-    let endDate : Date
-    let feelings : Float
-    let gamesPlayed : String
-    let gamingExperience : String
+    var journalID: String
+    var startDate : Date
+    var endDate : Date
+    var elapsedTime: Int
+    var feelings : Float
+    var gamesPlayed : String
+    var gamingExperience : String
+    
+    init(journalID: String, startDate: Date, endDate: Date, feelings: Float, gamesPlayed: String, gamingExperience: String) {
+        self.journalID = journalID
+        self.startDate = startDate
+        self.endDate = endDate
+        self.elapsedTime = Int(endDate.timeIntervalSince(startDate))
+        self.feelings = feelings
+        self.gamesPlayed = gamesPlayed
+        self.gamingExperience = gamingExperience
+    }
 }

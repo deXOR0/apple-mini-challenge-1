@@ -8,6 +8,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Main-->
+        <scene sceneID="IoX-pd-ymp">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="5U7-vx-DHx" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HnF-XC-45T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-352" y="-158"/>
+        </scene>
         <!--Timer Prompt View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
@@ -25,6 +33,15 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="labelColor"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QKv-La-Kq9">
+                                <rect key="frame" x="12" y="54" width="112" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Back"/>
+                                <connections>
+                                    <action selector="backButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="h4I-1G-JdQ"/>
+                                </connections>
+                            </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4yw-GT-OM0">
                                 <rect key="frame" x="39" y="298" width="312" height="248"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -98,6 +115,7 @@
                         <outlet property="timeLeftLabel" destination="P75-NH-VXd" id="wil-HV-pp8"/>
                         <outlet property="timeView" destination="5Ep-eg-evS" id="hRb-sr-GQN"/>
                         <segue destination="g5x-7p-iwy" kind="presentation" identifier="gotoTimer" modalPresentationStyle="fullScreen" id="AKT-JW-HqE"/>
+                        <segue destination="5U7-vx-DHx" kind="presentation" identifier="gotoHome" modalPresentationStyle="fullScreen" id="FhW-pd-5RF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -162,7 +180,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Pet_Waiting" translatesAutoresizingMaskIntoConstraints="NO" id="dNP-Ip-EtM">
-                                <rect key="frame" x="75" y="333" width="240" height="275"/>
+                                <rect key="frame" x="75" y="328" width="240" height="300"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ph2-PH-uQR">
@@ -189,11 +207,20 @@
                         <outlet property="timeView" destination="thP-qG-I7m" id="s1o-9r-6Gk"/>
                         <outlet property="timerLabel" destination="6FI-8x-qIB" id="dU1-o9-LeV"/>
                         <outlet property="titleOverlayView" destination="rDb-47-8ti" id="2M5-fM-6Mb"/>
+                        <segue destination="Cz8-CY-wgf" kind="presentation" identifier="gotoJournal" id="Exa-Yo-MRV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8OW-7S-rzb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="941.53846153846155" y="72.511848341232223"/>
+        </scene>
+        <!--Journal-->
+        <scene sceneID="mCr-hI-Jw9">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Journal" id="Cz8-CY-wgf" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BIR-ZR-WqT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1616" y="66"/>
         </scene>
     </scenes>
     <resources>

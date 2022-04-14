@@ -13,14 +13,14 @@ class User: Codable {
     let maxCoins = 99999
     let minCoins = 50
     let maxLevel = 10
-    var userCoins: Int = 50
+    var userCoins: Int = 500
     var userLevel: Int = 1
     var userExperience: Int = 0
     var lastLoggedIn: Date = Date()
     var gamingQuotaLeft: Int = 0
     var gamingTargetTime: Int = 0
-    var hunger: Int = 0
-    var affection: Int = 0
+    var hunger: Int = 50
+    var affection: Int = 50
     let dailyHungerDrain: Int = 30
     let dailyAffectionDrain: Int = 5
     var journalCollection: JournalCollection = JournalCollection()
@@ -52,7 +52,31 @@ class User: Codable {
                 // Fallback
             }
         }
+        self.inventory.storeBackground(backgroundID: "Background_Park")
         return false
+    }
+    
+    func injectData() {
+        journalCollection.addJournal(todaysDate: getDate(dateStr: "2022-03-01T11:42:00"), journal: Journal(journalID: "2022-03-01T11:42:00", startDate: getDate(dateStr: "2022-03-01T11:42:00"), endDate: getDate(dateStr: "2022-03-01T11:42:00"), feelings: 0.5, gamesPlayed: "Counter Strike", gamingExperience: "Mantap"))
+                journalCollection.addJournal(todaysDate: getDate(dateStr: "2022-04-01T11:42:00"), journal: Journal(journalID: "2022-04-01T11:42:00", startDate: getDate(dateStr: "2022-04-01T11:42:00"), endDate: getDate(dateStr: "2022-04-01T11:42:00"), feelings: 0.5, gamesPlayed: "Counter Strike", gamingExperience: "Mantap"))
+                journalCollection.addJournal(todaysDate: getDate(dateStr: "2022-04-02T11:42:00"), journal: Journal(journalID: "2022-04-02T11:42:00", startDate: getDate(dateStr: "2022-04-02T11:42:00"), endDate: getDate(dateStr: "2022-04-02T11:42:00"), feelings: 0.5, gamesPlayed: "Counter Strike", gamingExperience: "Mantap"))
+                journalCollection.addJournal(todaysDate: getDate(dateStr: "2022-04-03T11:42:00"), journal: Journal(journalID: "2022-04-03T11:42:00", startDate: getDate(dateStr: "2022-04-03T11:42:00"), endDate: getDate(dateStr: "2022-04-03T11:42:00"), feelings: 0.5, gamesPlayed: "Counter Strike", gamingExperience: "Mantap"))
+                journalCollection.addJournal(todaysDate: getDate(dateStr: "2022-04-04T11:42:00"), journal: Journal(journalID: "2022-04-04T11:42:00", startDate: getDate(dateStr: "2022-04-04T11:42:00"), endDate: getDate(dateStr: "2022-04-04T11:42:00"), feelings: 0.5, gamesPlayed: "Counter Strike", gamingExperience: "Mantap"))
+                journalCollection.addJournal(todaysDate: getDate(dateStr: "2022-04-05T11:42:00"), journal: Journal(journalID: "2022-04-05T11:42:00", startDate: getDate(dateStr: "2022-04-05T11:42:00"), endDate: getDate(dateStr: "2022-04-05T11:42:00"), feelings: 0.5, gamesPlayed: "Counter Strike", gamingExperience: "Mantap"))
+                journalCollection.addJournal(todaysDate: getDate(dateStr: "2022-04-06T11:42:00"), journal: Journal(journalID: "2022-04-06T11:42:00", startDate: getDate(dateStr: "2022-04-06T11:42:00"), endDate: getDate(dateStr: "2022-04-06T11:42:00"), feelings: 0.5, gamesPlayed: "Counter Strike", gamingExperience: "Mantap"))
+                journalCollection.addJournal(todaysDate: getDate(dateStr: "2022-04-07T11:42:00"), journal: Journal(journalID: "2022-04-07T11:42:00", startDate: getDate(dateStr: "2022-04-07T10:42:00"), endDate: getDate(dateStr: "2022-04-07T11:42:00"), feelings: 0.5, gamesPlayed: "Counter Strike", gamingExperience: "Mantap"))
+                journalCollection.addJournal(todaysDate: getDate(dateStr: "2022-04-07T13:30:00"), journal: Journal(journalID: "2022-04-07T13:30:00", startDate: getDate(dateStr: "2022-04-07T12:30:00"), endDate: getDate(dateStr: "2022-04-07T13:30:00"), feelings: 0.7, gamesPlayed: "Valorant", gamingExperience: "Mantap banget"))
+                journalCollection.addJournal(todaysDate: getDate(dateStr: "2022-04-07T15:30:00"), journal: Journal(journalID: "2022-04-07T15:30:00", startDate: getDate(dateStr: "2022-04-07T14:05:00"), endDate: getDate(dateStr: "2022-04-07T13:30:00"), feelings: 0.9, gamesPlayed: "Dota 2", gamingExperience: "Ewwwww"))
+                journalCollection.addJournal(todaysDate: getDate(dateStr: "2022-04-08T13:30:00"), journal: Journal(journalID: "2022-04-08T13:30:00", startDate: getDate(dateStr: "2022-04-08T09:30:00"), endDate: getDate(dateStr: "2022-04-08T13:30:00"), feelings: 0.3, gamesPlayed: "Counter Strike", gamingExperience: "Kalah brok"))
+                journalCollection.addJournal(todaysDate: getDate(dateStr: "2022-04-08T20:30:00"), journal: Journal(journalID: "2022-04-08T20:30:00", startDate: getDate(dateStr: "2022-04-08T17:00:00"), endDate: getDate(dateStr: "2022-04-08T20:30:00"), feelings: 0.8, gamesPlayed: "Counter Strike", gamingExperience: "Mantap"))
+    }
+    
+    func getDate(dateStr: String) -> Date {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+        dateFormatter.timeZone = TimeZone.current
+        dateFormatter.locale = Locale.current
+        return dateFormatter.date(from: dateStr) ?? Date() // "2015-04-01T11:42:00"
     }
 
     func save() {

@@ -27,7 +27,6 @@ class TimerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
         backgroundImage.image = UIImage(named: self.user.inventory.backgroundUsed)
         titleOverlayView.layer.opacity = 0.3
@@ -37,6 +36,7 @@ class TimerViewController: UIViewController {
         timerLabel.text = buildTimeString(sec: elapsedTime)
         targetTimeLabel.text = buildTimeString(sec: self.user.gamingQuotaLeft)
         
+        startDate = Date()
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerTick), userInfo: nil, repeats: true)
         
     }
@@ -75,16 +75,20 @@ class TimerViewController: UIViewController {
     
     @IBAction func stopButtonPressed(_ sender: UIButton) {
         timer.invalidate()
-        self.user.gamingQuotaLeft = max(self.user.gamingQuotaLeft - elapsedTime, 0)
-//        performSegue(withIdentifier: "<segueName>", sender: self)
+        endDate = Date()
+        self.user.gamingQuotaLeft = self.user.gamingQuotaLeft - elapsedTime
+        performSegue(withIdentifier: "gotoJournal", sender: self)
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "<segueName>" {
-//            let destinationViewController = segue.destination as? <ViewControllerName>
-//            destinationViewController?.user = self.user
-//        }
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "gotoJournal" {
+            let destinationViewController = segue.destination as? JournalViewController
+            destinationViewController?.user = self.user
+            destinationViewController?.startDate = self.startDate
+            destinationViewController?.endDate = self.endDate
+            destinationViewController?.elapsedTime = self.elapsedTime
+        }
+    }
     
 
     /*

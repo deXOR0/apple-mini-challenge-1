@@ -16,12 +16,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="skyBackground" translatesAutoresizingMaskIntoConstraints="NO" id="vyS-T9-Fea" userLabel="Background">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vyS-T9-Fea" userLabel="Background">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Pet" translatesAutoresizingMaskIntoConstraints="NO" id="jsh-w8-hMR" userLabel="Oodin Holder">
-                                <rect key="frame" x="82" y="333" width="226" height="259"/>
+                                <rect key="frame" x="75" y="328" width="240" height="300"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.34999999403953552" translatesAutoresizingMaskIntoConstraints="NO" id="6Ul-Af-M1B">
@@ -69,12 +69,16 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                                     <color key="baseBackgroundColor" red="0.36078432199999999" green="0.7019608021" blue="0.74901962280000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="continueButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="oDU-0g-kRP"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="E4Z-yk-VL6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="background" destination="vyS-T9-Fea" id="7Hh-Xk-YOH"/>
                         <outlet property="bottomOverlayView" destination="KDx-QG-nwS" id="K3e-Cb-bgO"/>
                         <outlet property="expGained" destination="lbK-DN-FPN" id="VQm-l7-zX1"/>
                         <outlet property="expRange" destination="SXz-Mf-RYa" id="bTH-tS-jOH"/>
@@ -82,16 +86,24 @@
                         <outlet property="levelHolder" destination="T2a-1H-cFT" id="n82-bx-bdT"/>
                         <outlet property="oodinHolder" destination="jsh-w8-hMR" id="mYZ-ao-sXi"/>
                         <outlet property="resultMessage" destination="qxC-Zd-YoH" id="Rue-Xl-vw4"/>
+                        <segue destination="1ni-8m-Anw" kind="presentation" identifier="gotoHome" modalPresentationStyle="fullScreen" id="VOA-Qv-zKG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="54" y="57"/>
+            <point key="canvasLocation" x="53.846153846153847" y="56.872037914691937"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="4Qo-ze-7R8">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="1ni-8m-Anw" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7XJ-Bl-QHm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="724" y="58"/>
         </scene>
     </scenes>
     <resources>
         <image name="Pet" width="746" height="1066"/>
-        <image name="skyBackground" width="1170" height="2532"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

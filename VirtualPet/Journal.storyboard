@@ -148,11 +148,22 @@
                     </view>
                     <connections>
                         <outlet property="emojiHolder" destination="VYH-GE-rvB" id="fXO-k5-eVq"/>
+                        <outlet property="gamesPlayedInput" destination="Smf-L8-7zQ" id="NiM-33-qR4"/>
+                        <outlet property="gamingExperienceInput" destination="t2g-lK-tqU" id="q1Y-mM-u4o"/>
+                        <segue destination="Vpx-VX-oL4" kind="presentation" identifier="gotoOverview" modalPresentationStyle="fullScreen" id="eFs-Uz-AOH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="12" y="80"/>
+        </scene>
+        <!--Overview-->
+        <scene sceneID="Lva-QR-1y9">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Overview" id="Vpx-VX-oL4" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v7B-Oq-UeG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="541" y="76"/>
         </scene>
     </scenes>
     <resources>

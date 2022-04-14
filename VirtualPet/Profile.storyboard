@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Profile View Controller-->
+        <!--Profile-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController id="Y6W-OH-hqX" customClass="ProfileViewController" customModule="VirtualPet" customModuleProvider="target" sceneMemberID="viewController">
@@ -68,21 +68,51 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dba-lw-m2s">
+                                <rect key="frame" x="16" y="44" width="95" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Back"/>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Avm-s7-JnG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Profile" leftItemsSupplementBackButton="YES" id="m1m-7n-PH5"/>
                     <connections>
                         <outlet property="barChartView" destination="tY0-5g-dGX" id="rEx-RO-iAK"/>
                         <outlet property="calendarBackgroundView" destination="7RG-Qj-myw" id="mx6-pH-NJ2"/>
                         <outlet property="calendarView" destination="Lgo-oF-vKp" id="Y4q-1P-u5T"/>
                         <outlet property="levelLabel" destination="Bj1-iX-v7h" id="axh-lY-eDQ"/>
                         <outlet property="usernameLabel" destination="P5n-U1-91S" id="dr8-0T-Zcu"/>
+                        <segue destination="VQy-Rk-o10" kind="presentation" identifier="backToHome" modalPresentationStyle="fullScreen" id="bpt-UL-3QM"/>
+                        <segue destination="Iuk-Sd-QDl" kind="show" identifier="gotoJournalDetails" id="b1a-1u-407"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138.46153846153845" y="124.40758293838861"/>
+            <point key="canvasLocation" x="1067.6923076923076" y="124.40758293838861"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="uDJ-Rh-zRZ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="VQy-Rk-o10" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y2U-zK-8pb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1743" y="128"/>
+        </scene>
+        <!--JournalDetails-->
+        <scene sceneID="III-ot-MYL">
+            <objects>
+                <viewControllerPlaceholder storyboardName="JournalDetails" id="Iuk-Sd-QDl" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="8FH-B7-LQD"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yFi-8y-f1S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1629" y="265"/>
         </scene>
     </scenes>
     <resources>
